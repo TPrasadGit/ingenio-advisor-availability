@@ -6,6 +6,11 @@ import { faMessage, faPhone } from "@fortawesome/free-solid-svg-icons";
 import AdvisorItemButton from "./advisor-item-button";
 import { ContactMode } from "../enum/contact-mode";
 
+/**
+ * Component to show the Advisor details and buttons
+ * @param IAdvisorProps
+ * @returns 
+ */
 export default function AdvisorItem({
     id,
     name,

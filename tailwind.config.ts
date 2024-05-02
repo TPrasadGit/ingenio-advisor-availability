@@ -8,12 +8,12 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        default : 'Calibri, Arial, Helvetica, sans-serif',
+        default : 'Calibri, Arial, Helvetica, sans-serif', // Creates a css class 'font-default'. Used for all text.
       },
       colors: {
-        'advisor': '#4FAFAE',
-        'online': '#4FAFAE',
-        'offline': '#CCC',
+        'advisor': '#4FAFAE', // Creates a css class 'text-advisor'. Used for Advisor name.
+        'online': '#4FAFAE', // Creates a css class 'bg-online'. Used in Call and Chat buttons.
+        'offline': '#CCC', // Creates a css class 'bg-offline'. Used in Call and Chat buttons.
       },
     },
   },

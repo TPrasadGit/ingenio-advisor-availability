@@ -3,10 +3,20 @@ import { IAdvisorButtonProps } from "../model/IAdvisor";
 import { faMessage, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { ContactMode } from "../enum/contact-mode";
 
+/**
+ * A button component to use for the Advisor actions
+ * @param IAdvisorButtonProps 
+ * @returns 
+ */
+
 export default function AdvisorItemButton({
     isAvailable,
     contactMode,
 }: IAdvisorButtonProps) {
+
+    /**
+     * Shows a confirmation dialog for enabled buttons
+     */
     const handleClick = () => {
         window.confirm(`Do you wish to ${contactMode}?`);
     };

@@ -1,9 +1,14 @@
 import { IAdvisorProps } from "@/app/model/IAdvisor";
 
+// URL Constants
 const baseUrl = "https://demo2255213.mockable.io/";
 const advisorUrl = "listings";
 const advisorAvailabilityUrl = "advisor-availability?advisorId=";
 
+/**
+ * Method to call the API to fetch Advisor List
+ * @returns 
+ */
 export const getAdvisorsList = async () => {
   let advisorData = await fetch(`${baseUrl}${advisorUrl}`);
   let advisorList: IAdvisorProps[] = [];
@@ -22,10 +27,21 @@ export const getAdvisorsList = async () => {
   return advisorList;
 };
 
+/**
+ * Generates and returns requests for specific Advisor ID
+ * @param id 
+ * @returns 
+ */
 export const getAdvisorAvailabilityStatus = (id: number) => {
   return fetch(`${baseUrl}${advisorAvailabilityUrl}${id}`);
 };
 
+/**
+ * Call multiple requests for all Advisor IDs.
+ * Uses Promise.all to fetch all requests instead of calling sequentially.
+ * @param advisorIds 
+ * @returns 
+ */
 export const getAllAdvisorAvailabilityStatus = async (
   advisorIds: Array<number>
 ) => {

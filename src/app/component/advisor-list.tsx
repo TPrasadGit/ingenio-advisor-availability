@@ -1,6 +1,11 @@
 import { IAdvisorListProps } from "../model/IAdvisor";
 import AdvisorItem from "./advisor-item";
 
+/**
+ * Lists all the Advisors
+ * @param IAdvisorListProps
+ * @returns 
+ */
 export default function AdvisorList({
     advisorList,
 }: IAdvisorListProps) {
